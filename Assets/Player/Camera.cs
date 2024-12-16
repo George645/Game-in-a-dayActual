@@ -4,7 +4,7 @@ using Unity.Cinemachine;
 
 public class CinemachineCameraScipt : MonoBehaviour {
     double rotation;
-    double startZ = -10f;
+    double startZ = -5f;
     double startX = 0f;
     CinemachineFollow cinemachineFollow;
     Vector3 startMousePosition;
@@ -18,7 +18,7 @@ public class CinemachineCameraScipt : MonoBehaviour {
             startMousePosition = Input.mousePosition;
         }
         if (Input.GetMouseButton(1)) {
-            rotation = (Input.mousePosition.x - startMousePosition.x) / 10;
+            rotation = (Input.mousePosition.x - startMousePosition.x) / 5;
             startZ = cinemachineFollow.FollowOffset.z;
             startX = cinemachineFollow.FollowOffset.x;
             startMousePosition = Input.mousePosition;
@@ -26,6 +26,6 @@ public class CinemachineCameraScipt : MonoBehaviour {
     }
     private void OnApplicationQuit() {
         cinemachineFollow.FollowOffset.x = 0;
-        cinemachineFollow.FollowOffset.z = -10;
+        cinemachineFollow.FollowOffset.z = -5;
     }
 }
