@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour{
     public Camera followingCamera;
-    float playerSpeed = 50;
-    Rigidbody rb;
+    float playerSpeed = 5;
+    CharacterController cc;
     public GameObject createSnowBall;
     GameObject currentSnowball;
     private void Awake() {
@@ -12,7 +12,7 @@ public class Player : MonoBehaviour{
     }
     void Start(){
         followingCamera = FindFirstObjectByType<Camera>();
-        rb = GetComponent<Rigidbody>();
+        cc = GetComponent<CharacterController>();
     }
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour{
     private void FixedUpdate() {
         Vector3 move = new Vector3(-(followingCamera.transform.position.x - transform.position.x) * Input.GetAxis("Vertical") + -(followingCamera.transform.position.z - transform.position.z) * Input.GetAxis("Horizontal"), 0, -(followingCamera.transform.position.z - transform.position.z) * Input.GetAxis("Vertical") + (followingCamera.transform.position.x - transform.position.x) * Input.GetAxis("Horizontal"));
         move = move.normalized;
-        move *= playerSpeed;
-        rb.AddForce(move);
+        cc.Move(move * Time.deltaTime * playerSpeed);
+        transform.position = new Vector3(transform.position.x, 1, transform.position.z);
     }
 }
