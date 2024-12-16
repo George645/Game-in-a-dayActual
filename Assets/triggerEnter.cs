@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class triggerEnter : MonoBehaviour{
-    List<SnowballScript> snowballs = new();
+    public List<SnowballScript> snowballs = new();
     private void OnTriggerEnter(Collider other) {
         Debug.Log(other + " entered");
         if (other.name.Contains("nowball")) {

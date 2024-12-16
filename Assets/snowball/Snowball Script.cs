@@ -14,6 +14,12 @@ public class SnowballScript : MonoBehaviour{
         startposition = transform.position;
         transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
     }
+    private void OnTriggerEnter(Collider other) {
+        try {
+            other.GetComponent<triggerEnter>().snowballs.Add(this);
+        }
+        catch { }
+    }
     void Update(){
         Debug.Log(transform.localScale);
         if (startposition != transform.position) {

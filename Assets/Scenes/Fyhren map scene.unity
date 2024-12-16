@@ -592,7 +592,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &774895893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +689,7 @@ GameObject:
   - component: {fileID: 775339063}
   - component: {fileID: 775339062}
   - component: {fileID: 775339066}
+  - component: {fileID: 775339067}
   m_Layer: 0
   m_Name: Collection zone
   m_TagString: Untagged
@@ -807,6 +808,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 7, z: 10}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &775339067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775339061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0e9fed723753648b11a19c4576a073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &855781757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1480,6 +1493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rio (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4132312772176831909, guid: 64b182395c0b6744a920c74bce3ece13, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8073086772555192299, guid: 64b182395c0b6744a920c74bce3ece13, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2079,7 +2096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3df11d2415914f845b3367e002b87046, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 534.53735
+      value: 635.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3df11d2415914f845b3367e002b87046, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2087,7 +2104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3df11d2415914f845b3367e002b87046, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 536.7902
+      value: 664.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3df11d2415914f845b3367e002b87046, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2164,7 +2181,7 @@ MonoBehaviour:
   playerTag: Player
   detectionRadius: 1
   speed: 2
-  spawnTime: 5
+  spawnTime: 25
   jumpscareImage: {fileID: 1378065380}
 --- !u!195 &1998637956
 NavMeshAgent:

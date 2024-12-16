@@ -81,12 +81,13 @@ public class WendigoAI : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            TriggerJumpscare();
+            playerDetected = true;
         }
-
+        Debug.Log(wendigoSpawned);
         // If the Wendigo touches the player, trigger the jumpscare
         if (other.CompareTag(playerTag) && wendigoSpawned)
         {
+            Debug.Log("hi");
             TriggerJumpscare();
         }
     }
