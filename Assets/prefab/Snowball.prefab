@@ -123,5 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBeingPushed: 1
   pusher: {fileID: 0}
-  sizeLimiter: 100
+  sizeLimiter: 20
   DistanceFromSnowballToPlayer: 1
