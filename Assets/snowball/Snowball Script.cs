@@ -19,12 +19,11 @@ public class SnowballScript : MonoBehaviour{
             startposition = transform.position;
         }
         sizeScale = (float)Math.Clamp(sizeScale, 0.1, 3);
-        Debug.Log(sizeScale);
         transform.localScale = new Vector3(sizeScale, sizeScale, sizeScale);
         if (isBeingPushed) {
             if (new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).magnitude > 0.75) {
                 startposition = transform.position;
-                transform.position = new Vector3 (pusher.transform.position.x, pusher.transform.position.y, pusher.transform.position.z) + new Vector3(-(pusher.followingCamera.transform.position.x - pusher.transform.position.x) * Input.GetAxis("Vertical") - (pusher.followingCamera.transform.position.z - pusher.transform.position.z) * Input.GetAxis("Horizontal"), transform.localScale.x /2f - 0.1f, - (pusher.followingCamera.transform.position.z - pusher.transform.position.z) * Input.GetAxis("Vertical") + (pusher.followingCamera.transform.position.x - pusher.transform.position.x) * Input.GetAxis("Horizontal")).normalized * DistanceFromSnowballToPlayer * sizeScale;
+                transform.position = new Vector3 (pusher.transform.position.x, pusher.transform.position.y, pusher.transform.position.z) + new Vector3(-(pusher.followingCamera.transform.position.x - pusher.transform.position.x) * Input.GetAxis("Vertical") - (pusher.followingCamera.transform.position.z - pusher.transform.position.z) * Input.GetAxis("Horizontal"), transform.localScale.x, - (pusher.followingCamera.transform.position.z - pusher.transform.position.z) * Input.GetAxis("Vertical") + (pusher.followingCamera.transform.position.x - pusher.transform.position.x) * Input.GetAxis("Horizontal")).normalized * DistanceFromSnowballToPlayer * sizeScale;
                 if (Math.Abs(transform.position.magnitude - startposition.magnitude) > 1) {
                     startposition = transform.position;
                 }

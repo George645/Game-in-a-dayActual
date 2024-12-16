@@ -21,9 +21,10 @@ public class Player : MonoBehaviour{
         }
     }
     private void FixedUpdate() {
-        Vector3 move = new Vector3(-(followingCamera.transform.position.x - transform.position.x) * Input.GetAxis("Vertical") + -(followingCamera.transform.position.z - transform.position.z) * Input.GetAxis("Horizontal"), 0, -(followingCamera.transform.position.z - transform.position.z) * Input.GetAxis("Vertical") + (followingCamera.transform.position.x - transform.position.x) * Input.GetAxis("Horizontal"));
-        move = move.normalized;
-        cc.Move(move * Time.deltaTime * playerSpeed);
-        transform.position = new Vector3(transform.position.x, 1, transform.position.z);
+        if (new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).magnitude > 0.75) {
+            Vector3 move = new Vector3(-(followingCamera.transform.position.x - transform.position.x) * Input.GetAxis("Vertical") + -(followingCamera.transform.position.z - transform.position.z) * Input.GetAxis("Horizontal"), 0, -(followingCamera.transform.position.z - transform.position.z) * Input.GetAxis("Vertical") + (followingCamera.transform.position.x - transform.position.x) * Input.GetAxis("Horizontal"));
+            move = move.normalized;
+            cc.Move(move * Time.deltaTime * playerSpeed);
+        }
     }
 }
