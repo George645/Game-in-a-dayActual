@@ -455,7 +455,24 @@ MonoBehaviour:
 
     George: Our main coder and spent a long time creating the
     code that is in the game as well as making sure that the shared github didn''t
-    break.'
+    break.
+
+
+    AXLE: Contributed with making assets such as the snowman and its
+    various parts, and made presents that were going to be collectibles.
+
+
+    Fyhren:
+    Made the map and helped with figuring out how to alter the lighting to make it
+    night time.
+
+
+    George: Was the the only person to be doing the slides due
+    to it being better to have one person focus on it.
+
+
+    Nicholas: Made the Main
+    Menu and both the Credits and Victory scene.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11e718fc5530d19408bf76f864f666b0, type: 2}
   m_sharedMaterial: {fileID: 4562537029399279183, guid: 11e718fc5530d19408bf76f864f666b0, type: 2}
@@ -482,10 +499,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 68.6
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

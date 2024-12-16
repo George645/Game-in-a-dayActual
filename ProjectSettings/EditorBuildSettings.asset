@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fyhren map scene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: b50d746d162b1db4ca6f94dc81dd1379
+  - enabled: 1
+    path: Assets/Scenes/Victory Scene.unity
+    guid: 887a29fded0975b4eb451d3c73bada72
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 6424e9e7b692c2f44bbf11ea9df64eab
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
